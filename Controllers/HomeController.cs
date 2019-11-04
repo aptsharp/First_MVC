@@ -20,13 +20,19 @@ namespace Fist.Aplication.MVC.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 
         public IActionResult Privacy()
         {
+            ViewData["Message"] = "Nova aplicação.";
+            ViewData["email"] = "qualquer@qualquer";
+
             return View();
+
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
