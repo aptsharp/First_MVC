@@ -9,6 +9,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Fist.Aplication.MVC
 {
+    /*
+     * curso da Udemy do Nelio Alve
+     */
     public class Program
     {
         public static void Main(string[] args)
