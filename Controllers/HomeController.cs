@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Fist.Aplication.MVC.Models;
+using Fist.Aplication.MVC.Models.ViewsModels;
 
 namespace Fist.Aplication.MVC.Controllers
 {
@@ -26,8 +26,8 @@ namespace Fist.Aplication.MVC.Controllers
 
         public IActionResult Privacy()
         {
-            ViewData["Message"] = "Nova aplicação.";
-            ViewData["email"] = "qualquer@qualquer";
+            ViewData["Message"] = "Nova aplicação de teste";
+            ViewData["email"] = "qualquer@qualquer.com.br";
 
             return View();
 

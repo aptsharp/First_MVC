@@ -1,6 +1,6 @@
 using System;
 
-namespace Fist.Aplication.MVC.Models
+namespace Fist.Aplication.MVC.Models.ViewsModels
 {
     public class ErrorViewModel
     {
