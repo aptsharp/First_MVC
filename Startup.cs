@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Fist.Aplication.MVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fist.Aplication.MVC
 {
@@ -28,8 +28,8 @@ namespace Fist.Aplication.MVC
             services.AddControllersWithViews();
 
             services.AddDbContext<FistAplicationMVCContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("FistAplicationMVCContext")));
-        }
+                    options.UseMySql(Configuration.GetConnectionString("FistAplicationMVCContext"), builder => builder.MigrationsAssembly("Fist.Aplication.MVC")));
+        }  // faz a conexão com o banco de dados 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
